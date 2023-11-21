@@ -17,27 +17,50 @@
 
 for (let number = 1; number <= 100; number++) {
 
-    // Se è divisibile per 3 e per 5... 
+    // Se il numero è divisibile per 3 e 5 .toExponential.apply. 
 
     if (number % 3 === 0 && number % 5 === 0) {
-        console.log("FizzBuzz");        
-    } 
+        console.log("FizzBuzz");
+    
+    // altrimenti se solo per 3... 
 
-    // Se è divisibile solo per 3... 
-
-    else if (number % 3 === 0) {
+    } else if (number % 3 === 0) {
         console.log("Fizz");
-    } 
-
-    // Se è divisibile solo per 5... 
+    }
+     
+    // altrimenti se solo per 5... 
 
     else if (number % 5 === 0) {
         console.log("Buzz");
-    } 
-
-    // Altrimenti... 
+    }
+    
+    // altrimenti se per nessuno dei due ... 
 
     else {
         console.log(number);
     }
+}
+    // aggiungo un div con classe square 
+
+for (let numero = 1; numero <= 100; numero++) {
+    let risultato = document.createElement('div');
+    risultato.className = 'square';
+
+    if (numero % 3 === 0 && numero % 5 === 0) {
+        risultato.textContent = "FizzBuzz";
+        risultato.classList.add('fizzbuzz');
+    } else if (numero % 3 === 0) {
+        risultato.textContent = "Fizz";
+        risultato.classList.add('fizz');
+    } else if (numero % 5 === 0) {
+        risultato.textContent = "Buzz";
+        risultato.classList.add('buzz');
+    } else {
+        risultato.textContent = numero;
+        risultato.classList.add('numero');
+    }
+
+    // lo inietto in container ... 
+
+    document.getElementById('container').appendChild(risultato);
 }
