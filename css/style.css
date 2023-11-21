@@ -51,3 +51,7 @@ body {
     border: 1px solid #f3f3f3; 
     color: white;
 }
+
+.square:hover {
+    opacity: 0.5;
+}
